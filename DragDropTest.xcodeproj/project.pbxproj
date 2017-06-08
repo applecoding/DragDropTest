@@ -26,6 +26,7 @@
 		4BD2A5731EE8AD70009441DD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		4BD2A5751EE8AE7F009441DD /* poke-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "poke-info.plist"; path = "../recursosPlayground/poke-info.plist"; sourceTree = "<group>"; };
 		4BD2A5771EE8B144009441DD /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4BED4ACF1EE9586E00B1C0DC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 		4BD2A5551EE8AD2D009441DD = {
 			isa = PBXGroup;
 			children = (
+				4BED4ACF1EE9586E00B1C0DC /* README.md */,
 				4BD2A5731EE8AD70009441DD /* CollectionViewController.swift */,
 				4BD2A5771EE8B144009441DD /* CollectionViewCell.swift */,
 				4BD2A5751EE8AE7F009441DD /* poke-info.plist */,
