@@ -9,14 +9,12 @@
 import UIKit
 import MobileCoreServices
 
-class CollectionViewController: UICollectionViewController, UICollectionViewDragDelegate {
+class CollectionViewController: UICollectionViewController {
     
     var datos:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView?.dragDelegate = self
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
@@ -42,24 +40,4 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDrag
         cell.texto.text = datos[indexPath.row]
         return cell
     }
-    
-    func dragItems(for indexPath:IndexPath) -> [UIDragItem] {
-        let pokemon = collectionView?.cellForItem(at: indexPath) as! CollectionViewCell
-        let imagen = pokemon.imagen.image
-        
-        let itemProvider = NSItemProvider()
-        itemProvider.registerDataRepresentation(forTypeIdentifier: kUTTypePNG as String, visibility: .all) {
-            completion in
-            let data = UIImagePNGRepresentation(imagen!)
-            completion(data, nil)
-            return nil
-        }
-        let dragItem = UIDragItem(itemProvider: itemProvider)
-        return [dragItem]
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-        return dragItems(for: indexPath)
-    }
-    
 }
