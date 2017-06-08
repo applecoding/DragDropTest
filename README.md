@@ -6,4 +6,5 @@ Este proyecto está realizado a modo de prueba y todo su contenido (incluidas la
 
 Cualquier duda, puedes acudir al artículo que corresponde a este tutorial en:
 
+[Drag & Drop (I): Introducción y *Drag*](https://applecoding.com/guias/drag-drop-i-introduccion-drag)
 

@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController, UICollectionViewDragDelegate {
     
     var datos:[String] = []
     
@@ -18,6 +18,8 @@ class CollectionViewController: UICollectionViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
+        
+        collectionView?.dragDelegate = self
         
         if let plistFile = Bundle.main.path(forResource: "poke-info", ofType: "plist"), let data = FileManager.default.contents(atPath: plistFile) {
             do {
@@ -39,5 +41,24 @@ class CollectionViewController: UICollectionViewController {
         cell.imagen.image = UIImage(named: datos[indexPath.row])
         cell.texto.text = datos[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        return dragItems(for: indexPath)
+    }
+    
+    func dragItems(for indexPath:IndexPath) -> [UIDragItem] {
+        let celda = collectionView?.cellForItem(at: indexPath) as! CollectionViewCell
+        let imagen = celda.imagen.image
+        
+        let itemProvider = NSItemProvider()
+        itemProvider.registerDataRepresentation(forTypeIdentifier: kUTTypePNG as String, visibility: .all) {
+            completado in
+            let data = UIImagePNGRepresentation(imagen!)
+            completado(data, nil)
+            return nil
+        }
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        return [dragItem]
     }
 }
