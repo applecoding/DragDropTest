@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pokemons</key>
+	<array>
+		<string>Articuno</string>
+		<string>Blastoise</string>
+		<string>Bulbasaur</string>
+		<string>Charizard</string>
+		<string>Charmander</string>
+		<string>Eevee</string>
+		<string>Gengar</string>
+		<string>Gyarados</string>
+		<string>Haunter</string>
+		<string>Jigglypuff</string>
+		<string>Jynx</string>
+		<string>Lapras</string>
+		<string>Magikarp</string>
+		<string>Meowth</string>
+		<string>Mew</string>
+		<string>Mewtwo</string>
+		<string>Moltres</string>
+		<string>MrMime</string>
+		<string>Pikachu</string>
+		<string>Psyduck</string>
+		<string>Snorlax</string>
+		<string>Squirtle</string>
+		<string>Venusaur</string>
+		<string>Zapdos</string>
+	</array>
+</dict>
+</plist>
